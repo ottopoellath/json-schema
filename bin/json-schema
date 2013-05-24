@@ -12,4 +12,4 @@ bail "Schema file #{ARGV[0]} does not exist" unless File.exists?(ARGV[0])
 bail "Instance file #{ARGV[1]} does not exist" unless File.exists?(ARGV[1])
 
 validation_errors = JSON::Validator.fully_validate(ARGV[0], ARGV[1], :errors_as_objects => false, :validate_schema => false)
-bail "Instance #{instance} validation failed:\n#{validation_errors}" unless validation_errors.empty?
+bail "Instance #{ARGV[1]} validation failed:\n#{validation_errors.join("\n")}" unless validation_errors.empty?
