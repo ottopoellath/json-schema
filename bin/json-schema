@@ -7,7 +7,7 @@ def bail msg
   exit 1
 end
 
-bail "Usage: #{$0} <SCHEMA-FILE> [<INSTANCE-FILE>]" unless ARGV.length == 2
+bail "Usage: #{File.basename($0)} <SCHEMA-FILE> [<INSTANCE-FILE>]" unless ARGV.length == 2
 bail "Schema file #{ARGV[0]} does not exist" unless File.exists?(ARGV[0])
 bail "Instance file #{ARGV[1]} does not exist" unless File.exists?(ARGV[1])
 
