@@ -14,6 +14,6 @@ spec = Gem::Specification.new do |s|
   s.files = Dir[ "lib/**/*", "resources/*.json" ]
   s.require_path = "lib"
   s.test_files = Dir[ "test/**/test*", "test/{data,schemas}/*.json" ]
-  s.extra_rdoc_files = ["README.textile","LICENSE.md"]
+  s.extra_rdoc_files = ["README.md","LICENSE.md"]
   s.executables << 'json-schema'
 end
